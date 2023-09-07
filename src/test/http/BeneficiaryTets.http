@@ -1,0 +1,8 @@
+GET http://localhost:8080/api/v1/beneficiary
+Accept: application/json
+
+###
+GET http://localhost:8080/api/v1/beneficiary/paul_mirot
+Accept: application/json
+
+###

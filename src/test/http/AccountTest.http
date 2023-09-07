@@ -1,0 +1,41 @@
+POST http://localhost:8080/api/v1/account/transfer
+Content-Type: application/json
+
+{
+  "accNumberFrom": 5492169770442046031,
+  "accNumberTo": 7453175727928922073,
+  "amount": 100,
+  "pinCode": "1111"
+}
+
+###
+POST http://localhost:8080/api/v1/account/withDraw
+Content-Type: application/json
+Connection: keep-alive
+
+{
+  "accNumberFrom": 5492169770442046031,
+  "amount": 30,
+  "pinCode": "1799"
+}
+
+###
+POST http://localhost:8080/api/v1/account/deposit
+Content-Type: application/json
+
+{
+  "accNumberFrom": 5492169770442046031,
+  "amount": 50
+}
+
+###
+POST http://localhost:8080/api/v1/account
+Content-Type: application/json
+
+{
+  "beneficiaryName": "bank_user",
+  "pinCode": "1111"
+}
+
+###
+

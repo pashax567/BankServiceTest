@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:h2:./h2storage/dbfile
+    username: sa
+    password: zKmFPC9D
+    hikari:
+      maximum-pool-size: 10
+      connection-timeout: 60000
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  liquibase:
+    change-log: db/changelog/changelog-master.xml
+  h2:
+    console:
+      enabled: true

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+
+    <changeSet id="20230901-create_beneficiary-v0" author="pmirot">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="beneficiary"/>
+            </not>
+        </preConditions>
+        <sqlFile path="db/changelog/20230905/create_beneficiary.sql"/>
+    </changeSet>
+
+    <changeSet id="20230901-create_account-v0" author="pmirot">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="account"/>
+            </not>
+        </preConditions>
+        <sqlFile path="db/changelog/20230905/create_account.sql"/>
+    </changeSet>
+
+    <changeSet id="20230901-create_transaction_history-v0" author="pmirot">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="transaction_history"/>
+            </not>
+        </preConditions>
+        <sqlFile path="db/changelog/20230905/create_transaction_history.sql"/>
+    </changeSet>
+</databaseChangeLog>
